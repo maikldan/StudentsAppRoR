@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @library_subscription.status %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @library_subscription.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @library_subscription.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_library_subscription_path(@library_subscription) %> |
+<%= link_to 'Back', library_subscriptions_path %>

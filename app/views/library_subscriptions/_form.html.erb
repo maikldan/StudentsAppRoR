@@ -1,0 +1,32 @@
+<%= form_for(library_subscription) do |f| %>
+  <% if library_subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(library_subscription.errors.count, "error") %> prohibited this library_subscription from being saved:</h2>
+
+      <ul>
+      <% library_subscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.datetime_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.datetime_select :end_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

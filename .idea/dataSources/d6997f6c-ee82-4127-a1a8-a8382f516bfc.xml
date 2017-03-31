@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="student@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="student">
+      <ObjectId>17721</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-03-09.11:12:03.917</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1255</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="library_subscriptions_id_seq">
+      <ObjectId>17738</ObjectId>
+      <StateNumber>1255</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="10" parent="3" name="ar_internal_metadata">
+      <ObjectId>17730</ObjectId>
+      <StateNumber>1254</StateNumber>
+    </table>
+    <table id="11" parent="3" name="library_subscriptions">
+      <ObjectId>17740</ObjectId>
+      <StateNumber>1255</StateNumber>
+    </table>
+    <table id="12" parent="3" name="schema_migrations">
+      <ObjectId>17722</ObjectId>
+      <StateNumber>1253</StateNumber>
+    </table>
+    <column id="13" parent="10" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1254</StateNumber>
+    </column>
+    <column id="14" parent="10" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1254</StateNumber>
+    </column>
+    <column id="15" parent="10" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1254</StateNumber>
+    </column>
+    <column id="16" parent="10" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1254</StateNumber>
+    </column>
+    <index id="17" parent="10" name="ar_internal_metadata_pkey">
+      <ObjectId>17736</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="10" name="ar_internal_metadata_pkey">
+      <ObjectId>17737</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1255</StateNumber>
+      <DefaultExpression>nextval(&apos;library_subscriptions_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="20" parent="11" name="status">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1255</StateNumber>
+    </column>
+    <column id="21" parent="11" name="start_date">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1255</StateNumber>
+    </column>
+    <column id="22" parent="11" name="end_date">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1255</StateNumber>
+    </column>
+    <column id="23" parent="11" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1255</StateNumber>
+    </column>
+    <column id="24" parent="11" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1255</StateNumber>
+    </column>
+    <index id="25" parent="11" name="library_subscriptions_pkey">
+      <ObjectId>17747</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="11" name="library_subscriptions_pkey">
+      <ObjectId>17748</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>library_subscriptions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="12" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1253</StateNumber>
+    </column>
+    <index id="28" parent="12" name="schema_migrations_pkey">
+      <ObjectId>17728</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="12" name="schema_migrations_pkey">
+      <ObjectId>17729</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
